@@ -1,0 +1,12 @@
+package com.nt.sbeans;
+
+import com.nt.services.CarService;
+
+public class CarServiceImpl implements CarService{
+
+	@Override
+	public void startEngine() {
+		System.out.println("Engine Starts");
+	}
+
+}

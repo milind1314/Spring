@@ -1,0 +1,14 @@
+package com.nt.main;
+
+
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import com.nt.sbeans.PaymentProcess;
+
+public class MainClass {
+public static void main(String[] args) {
+	FileSystemXmlApplicationContext ctx = new FileSystemXmlApplicationContext("src/com/nt/cnfg/AppConfig");
+	PaymentProcess pay = (PaymentProcess) ctx.getBean("ppp");
+	pay.option(2000);
+}
+}

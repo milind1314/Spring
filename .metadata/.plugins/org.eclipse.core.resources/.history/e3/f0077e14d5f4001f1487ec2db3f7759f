@@ -1,0 +1,12 @@
+package main;
+
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import sbeans.WishMessageGenerator;
+
+public class ConstructorInjection {
+
+	
+	FileSystemXmlApplicationContext ctx = new FileSystemXmlApplicationContext("src/cnfg/ApplicationContext.xml");
+	WishMessageGenerator wmg 
+}

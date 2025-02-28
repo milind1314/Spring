@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- dependant spring bean cfg -->
+    
+    <bean id="carservice" class="com.nt.sbeans.CarServiceImpl" />
+    
+    <!-- target spring bean cfg -->
+    
+    <bean id="driver" class="com.nt.sbeans.Driver" >
+    	<constructor-arg name="carService" ref="carservice" />
+    </bean>
+
+</beans>

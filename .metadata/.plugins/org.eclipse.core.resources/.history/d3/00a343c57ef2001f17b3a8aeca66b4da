@@ -1,0 +1,13 @@
+package com.nt.main;
+
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import com.nt.sbeans.TodaysDate;
+
+public class DenpendencyInjection {
+
+	FileSystemXmlApplicationContext ctx = new FileSystemXmlApplicationContext("src/com/nt/cnfg/applicationContext.xml");
+	TodaysDate date = (TodaysDate) ctx.getBean("datePrinter",TodaysDate.class);
+	date.showDate();
+	
+}

@@ -1,0 +1,19 @@
+package com.nt.main;
+
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.FileSystemXmlApplicationContext;
+
+import com.nt.cnfg.AppConfig;
+import com.nt.sbeans.PayPalPaymentService;
+
+public class MainClass {
+public static void main(String[] args) {
+	//FileSystemXmlApplicationContext ctx = new FileSystemXmlApplicationContext("src/com/nt/cnfg/AppConfig");
+	AnnotationConfigApplicationContext ctx=new AnnotationConfigApplicationContext(AppConfig.class);
+	PayPalPaymentService pay = (PayPalPaymentService) ctx.getBean("ppp");
+	pay.processPayment(12000);
+	ctx.close();
+	
+}
+}

@@ -1,0 +1,23 @@
+package com.nt.sbeans;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.nt.services.CarService;
+
+public class Driver {
+
+	private final CarService carService;
+
+	@Autowired
+	public Driver(CarService carService) {
+		this.carService = carService;
+	}
+	
+	public void drive()
+	{
+		carService.startEngine();
+		System.out.println("Driver is now Driving...");
+	}
+	
+	
+}

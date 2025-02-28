@@ -1,0 +1,13 @@
+package com.nt.services;
+
+import org.springframework.stereotype.Service;
+
+@Service
+public class CarServiceImpl implements CarService{
+
+	@Override
+	public void startEngine() {
+		System.out.println("Engine Starts");
+	}
+
+}
